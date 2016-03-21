@@ -1,8 +1,21 @@
+require 'pry'
+
 class Item
-  # attrs here
+ attr_reader :type
 
-  # initialize here
-
-  # other methods here
-
+  def initialize
+    @type = get_type
+  end
+  
+  def get_type
+    types = Dir.entries('./public/img/items').reject do |f|
+      File.directory?(f)
+    end
+    
+    types.sample.chomp('.jpg')
+  end
+  
+  def format_type
+    type.split('_').map { |i| i.capitalize }.join(' ')
+  end
 end
