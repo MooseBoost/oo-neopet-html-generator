@@ -158,14 +158,6 @@ class User
       fileHtml.puts "            </ul>"      
     end
 
-    # fileHtml.puts %[            <li><img src="../../public/img/items/bluemirror.jpg"></li>]
-    # fileHtml.puts "            <ul>"
-    # fileHtml.puts "              <li><strong>Type:</strong> Bluemirror</li>"
-    # fileHtml.puts "            </ul>"
-    # fileHtml.puts %[            <li><img src="../../public/img/items/red_bouncy_ball.jpg"></li>]
-    # fileHtml.puts "            <ul>"
-    # fileHtml.puts "              <li><strong>Type:</strong> Red Bouncy Ball</li>"
-    # fileHtml.puts "            </ul>"
     fileHtml.puts "          </ul>"
     fileHtml.puts "        </div>"
     fileHtml.puts "        <!-- end listing items -->"
