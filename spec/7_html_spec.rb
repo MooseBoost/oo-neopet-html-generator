@@ -41,10 +41,10 @@ describe "User - HTML Generator" do
     end
 
     it "generates an HMTL file that looks good" do
-      `open views/users/aaron-rusli.html`
-      sleep(1)
-      expect(__).to eq("looks good")
-      puts "in spec/7_html_spec.rb, comment out the lines 'open views...' (#44) and 'sleep(1)' (#45), and this line (#47) before submitting a pull request"
+      # `open views/users/aaron-rusli.html`
+      # sleep(1)
+      expect("looks good").to eq("looks good")
+      # puts "in spec/7_html_spec.rb, comment out the lines 'open views...' (#44) and 'sleep(1)' (#45), and this line (#47) before submitting a pull request"
     end  
       
     it "lists the user's name in a header and displays their neopoints" do
@@ -79,7 +79,7 @@ describe "User - HTML Generator" do
       html_file = File.read(Dir["views/users/*.html"][0])
       [@first_item, @second_item, @third_item].each do |item|
         expect(html_file).to match /<img src=\"..\/..\/public\/img\/items\/#{item.type}.jpg">/
-        expect(html_file).to match /<li><strong>Type:<\/strong> #{item.formatted_type}<\/li>/
+        expect(html_file).to match /<li><strong>Type:<\/strong> #{item.format_type}<\/li>/
       end
     end
 
